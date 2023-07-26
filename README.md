@@ -6,6 +6,7 @@ A collection of (mostly games-focused) audio programming resources I've develope
 
 ## Unreal
 ![](/Unreal/exported/UE5%20Audio%20Schematic%20-%20Legacy.png)
+<img src="/Unreal/exported/UE5%20Audio%20Schematic%20-%20Legacy.png" width="512" />
 - **[Unreal Audio Components (legacy)](https://github.com/NiallMoody/Audio-Programming-Resources/blob/fdb194a4f6d475214d9a12d6fab30694d1fe34ab/Unreal/exported/UE5%20Audio%20Schematic%20-%20Legacy.pdf):** Diagram covering the primary audio components available in the Unreal engine (before the big UE5 audio updates), and how they interact with each other (pdf)
 
 ![](/Unreal/exported/UE5%20Audio%20Schematic%20-%20New.png)
