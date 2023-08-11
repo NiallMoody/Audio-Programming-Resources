@@ -108,7 +108,7 @@ function draw() {
 	}
 	
 	if(checkVisible(dataMovesCanvas)) {
-  	let dataContext = dataMovesCanvas.getContext('2d');
+	let dataContext = dataMovesCanvas.getContext('2d');
 		
 		const actualWidth = dataMovesCanvas.width - 12;
 		const centreY = dataMovesCanvas.height/2;
@@ -186,7 +186,7 @@ function draw() {
 	}
 	
 	if(checkVisible(pointerMovesCanvas)) {
-  	let pointerContext = pointerMovesCanvas.getContext('2d');
+	let pointerContext = pointerMovesCanvas.getContext('2d');
 		const actualWidth = pointerMovesCanvas.width - 12;
 		const centreY = pointerMovesCanvas.height/2;
 
