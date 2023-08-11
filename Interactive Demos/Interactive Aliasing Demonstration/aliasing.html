@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Interactive Aliasing Demonstration</title>
+
+	<link rel="stylesheet" href="aliasing.css" />
+	<script src="aliasing.js"></script>
+</head>
+
+<body>
+
+	<canvas id="responsive-canvas"></canvas>
+
+	<div class="centringContainer">
+  
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="FreqSlider"><strong>Frequency:</strong></label>
+		  </div>
+		  <div class="slidecontainer">
+			<input type="range" min="2" max="16" step="0.01" value="2" class="slider" id="FreqSlider"/>
+		  </div>
+		</div>
+	  </div>
+
+	<div class="main">
+
+	  <div class="full">
+		<p>
+		  This is a demonstration of aliasing in a digital system. Try turning on the <strong>View aliasing</strong> toggle and watch what happens to the orange signal when you increase the frequency of the blue signal.
+		</p>
+	  </div>
+
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="AliasedToggle"><strong>View aliasing:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<label class="switch">
+			  <input type="checkbox" id="AliasedToggle">
+			  <span class="toggleSlide" id="orangeBack"></span>
+			</label>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="full">
+		<p>
+		  The orange signal represents our attempt to reproduce the analogue (blue) signal given purely digital data.
+		</p>
+		<p>
+		  We are only able to convert analogue signals into digital data by <em>sampling</em> them at regular intervals.
+		</p>
+		<p>
+		  <strong>View samples</strong> visualises this digital data. Can you see why the orange signal does not follow the original blue signal?
+		</p>
+	  </div>
+  
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="SamplesToggle"><strong>View samples:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<label class="switch">
+			  <input type="checkbox" id="SamplesToggle">
+			  <span class="toggleSlide"></span>
+			</label>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="full">
+		<p>
+		  This effect is called <strong>aliasing</strong>. Because the frequency of our input signal is greater than <em>half</em> of our digital samplerate, we are unable to reproduce these higher frequencies accurately.
+		</p>
+		<p>
+		  Turn on audio to hear what aliased digital audio sounds like (tested in Chrome and Firefox 76).
+		</p>
+	  </div>
+
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="AudioToggle"><strong>Toggle audio:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<button type="button" onclick="audioToggle()" class="button" id="AudioToggle">
+			  <span class="material-icons">volume_off</span>
+			</button>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="full">
+		<p>
+		  <br/>
+		  <em><strong>Note:</strong> This example intentionally uses a less than perfect interpolation to emphasize the difficulties involved in reproducing an analogue signal in a digital system.</em>
+		</p>
+		<p>
+		  <em>This gives rise to additional aliasing artifacts close to the <a href="https://en.wikipedia.org/wiki/Nyquist_frequency">nyquist frequency</a>; you may hear 2 separate tones moving in opposite directions at certain frequency settings.</em>
+		</p>
+	  </div>
+
+	</div>
+  
+	</div>
+
+</body>
+</html>
