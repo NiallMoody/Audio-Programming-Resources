@@ -12,7 +12,7 @@ A collection of (mostly games-focused) audio programming resources I've develope
 **Note:** The PDFs include links to the appropriate Unreal documentation pages for each component, but github's pdf viewer doesn't support links. For that you will need to download the files.
 
 ## Interactive Demonstrations of Concepts
-A series of interactive demonstrations of audio and audio programming concepts, primarily hosted on codepen and archived [here](/Interactive%20Demos). The links below go to the codepen pages for each demonstration:
+A series of interactive demonstrations of digital audio and audio programming concepts, primarily hosted on codepen and archived [here](/Interactive%20Demos). The links below go to the codepen pages for each demonstration:
 
 - **[Interactive Aliasing Demonstration](https://codepen.io/NiallMoody/full/wvamwXM):** Demonstrates aliasing in the audio domain.
 - **[Interactive Bit Depth Demonstration](https://codepen.io/NiallMoody/full/bGENBOz):** Demonstrates the impact of bit depth on audio quality, and techniques for minimising correlated noise like dithering and noise shaping.
