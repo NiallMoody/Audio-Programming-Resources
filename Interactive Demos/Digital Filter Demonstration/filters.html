@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Digital Filter Demonstration</title>
+
+	<link rel="stylesheet" href="filters.css" />
+	<script src="filters.js"></script>
+</head>
+
+<body>
+
+	<canvas id="responsive-canvas"></canvas>
+	
+		<div class="table">
+			<div class="row">
+				<div class="subtitleLeft">
+					<h3>Time Domain</h3>
+				</div>
+				<div class="subtitleRight">
+					<h3>Frequency Domain</h3>
+				</div>
+			</div>
+		</div>
+
+	<div class="centringContainer">
+	
+		<div class="table">
+			<div class="row">
+				<div class="left">
+					<label for="FreqSlider"><strong>Filter Frequency:</strong></label>
+				</div>
+				<div class="slidecontainer">
+					<input type="range" min="50" max="22050" step="10" value="22050" class="slider" id="FreqSlider"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="main" id="main">
+
+			<div class="table">
+				<div class="row">
+					<div class="left">
+						<label for="AudioToggle"><strong>Toggle audio:</strong></label>
+					</div>
+					<div class="togglecontainer">
+						<button type="button" onclick="audioToggle()" class="button" id="AudioToggle">
+							<span class="material-icons">volume_off</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				This is a demonstration of some basic audio filters, using white noise
+				as an input. Turn on audio and alter the <strong>Filter
+				Frequency</strong> slider to hear and see the effect of the
+				currently-selected filter on that white noise input.
+			</p>
+		
+			<p>
+				Select different filter types using the <strong>Filter Type</strong>
+				selector, and listen to the effect they have on the audio.
+			</p>
+
+			<div class="table">
+				<div class="row">
+					<div class="left">
+						<label for="FilterType"><strong>Filter Type:</strong></label>
+					</div>
+					<div class="combocontainer">
+						<select class="combobox" id="FilterType">
+							<option value="low pass">Low pass</option>
+							<option value="high pass">High pass</option>
+							<option value="band pass">Band pass</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				Note how the filters here do not remove all frequency content beyond
+				their cutoff frequencies; rather, they attenuate that content with a
+				visible slope.
+			</p>
+
+		</div>
+	</div>
+
+</body>
+</html>

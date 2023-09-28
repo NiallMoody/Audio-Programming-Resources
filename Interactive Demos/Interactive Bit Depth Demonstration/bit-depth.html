@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Interactive Bit Depth Demonstration</title>
+
+	<link rel="stylesheet" href="bit-depth.css" />
+	<script src="bit-depth.js"></script>
+</head>
+
+<body>
+
+	<canvas id="responsive-canvas"></canvas>
+
+	<div id="mainControls">
+
+	<div class="centringContainer">
+
+	  <div class="table">
+	
+		<div class="row">
+		  <div class="left">
+			<label for="BitDepthSlider"><strong>Bit Depth:</strong></label>
+		  </div>
+		  <div class="slidecontainer">
+			<input type="range" min="1" max="16" step="1" value="16" class="slider" id="BitDepthSlider"/>
+		  </div>
+		  <div id="bitDepthText">
+			<strong>16</strong> bits
+		  </div>
+		</div>
+	
+	  </div>
+
+	<div class="main">
+
+	  <div class="full">
+		<p>
+		  This is an interactive demonstration of how bit depth affects digital audio. Try turning on the <strong>View digital</strong> toggle and watch what happens to the orange signal when you vary the <strong>Bit Depth</strong>.
+		</p>
+	  </div>
+
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="DigitalToggle"><strong>View digital:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<label class="switch">
+			  <input type="checkbox" id="DigitalToggle">
+			  <span class="toggleSlide" id="orangeBack"></span>
+			</label>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="full">
+		<p>
+		  The orange signal represents our attempt to reproduce the analogue (blue) signal given purely digital data.
+		</p>
+		<p>
+		  We do this by converting the analogue signal into a series of numbers. The bit depth we use to represent those numbers has a significant impact on the accuracy of our digital representation of the analogue signal.
+		</p>
+		<p>
+		  A higher Bit Depth means we have a more accurate signal and less digital (quantisation) noise is introduced into the signal.
+		</p>
+	  </div>
+
+	  <div class="full">
+		<p>
+		  Turn on audio to hear how lower bit depths affect digital audio (audio tested in Chrome and Firefox 80).
+		</p>
+	  </div>
+
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="AudioToggle"><strong>Toggle audio:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<button type="button" onclick="audioToggle()" class="button" id="AudioToggle">
+			  <span class="material-icons">volume_off</span>
+			</button>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="full">
+		<p>
+		  Quantisation noise is <em>correlated</em> noise, because the noise is <em>correlated</em> to the bit depth. While we can't remove this noise, we can mask it using <strong>dither</strong> and <strong>noise shaping</strong>. Perceptually, this increases the <strong>signal to noise ratio</strong>.
+		</p>
+		<p>
+		  Using the following 2 toggles, listen to how the distinctive quantisation noise we hear at lower bit depths disappears behind the dither and noise shaping we add to the signal.
+		</p>
+	  </div>
+
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="DitherToggle"><strong>Toggle dither:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<label class="switch">
+			  <input type="checkbox" id="DitherToggle">
+			  <span class="toggleSlide"></span>
+			</label>
+		  </div>
+		</div>
+		<div class="row">
+		  <div class="left">
+			<label for="ShapingToggle"><strong>Toggle noise shaping:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<label class="switch">
+			  <input type="checkbox" id="ShapingToggle">
+			  <span class="toggleSlide"></span>
+			</label>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="full">
+		<h2>Definitions:</h2>
+		<p>
+		  <strong>Dither:</strong> Adding noise to the signal before quantisation. Helps mask the very noticeable quantisation noise.
+		</p>
+		<p>
+		  <strong>Noise Shaping:</strong> Filtering the quantisation error in the signal (effectively moves the quantisation error into a portion of the spectrum where it's less noticeable).
+		</p>
+	  </div>
+  
+	  <div>
+		<!--Add a little whitespace at the bottom.-->
+		&nbsp;
+	  </div>
+
+	</div>
+
+	</div>
+  
+	</div>
+
+</body>
+</html>

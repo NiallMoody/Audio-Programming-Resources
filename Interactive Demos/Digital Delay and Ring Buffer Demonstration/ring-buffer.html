@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Digital Delay & Ring Buffer Demonstration</title>
+
+	<link rel="stylesheet" href="ring-buffer.css" />
+	<script src="ring-buffer.js"></script>
+</head>
+
+<body>
+
+	<!--
+	ToDo:
+	- Explanatory text.
+	- Make sure canvas dragging works on mobile.
+	- Fix centringContainer or mainDiv being taller than the viewport.
+	 -->
+
+	<div class="centringContainer">
+	
+		<div id="mainDiv">
+		
+			<h1>
+				Our perception of a digital delay:
+			</h1>
+			<canvas id="dataMovesCanvas"></canvas>
+		
+			<div class="table">
+				<div class="row">
+					<div class="left">
+						<label for="pointsToggle"><strong>View as points:</strong></label>
+					</div>
+					<div class="togglecontainer">
+						<label class="switch">
+							<input type="checkbox" id="pointsToggle">
+							<span class="toggleSlide"></span>
+						</label>
+					</div>
+				</div>
+			
+				<div class="row">
+					<div class="left">
+						<label for="speedSlider"><strong>Display speed:</strong></label>
+					</div>
+					<div class="togglecontainer">
+						<input type="range" min="1" max="16" step="1" value="16" class="slider" id="speedSlider"/>
+					</div>
+				</div>
+			</div>
+		
+			<h1>
+				The computer's perception of a digital delay:
+			</h1>
+			<canvas id="pointerMovesCanvas"></canvas>
+		
+		</div>
+	
+	</div>
+
+</body>
+</html>

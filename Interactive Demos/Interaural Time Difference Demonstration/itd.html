@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Interaural Time Difference Demonstration</title>
+
+	<link rel="stylesheet" href="itd.css" />
+	<script src="itd.js"></script>
+</head>
+
+<body>
+
+	<div class="centringContainer">
+	
+		<div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="audioToggleButton"><strong>Toggle audio:</strong></label>
+		  </div>
+		  <div class="togglecontainer">
+			<button type="button" class="button" id="audioToggleButton">
+			  <span class="material-icons">volume_off</span>
+			</button>
+		  </div>
+		</div>
+	  </div>
+  
+	  <div class="table">
+		<div class="row">
+		  <div class="left">
+			<label for="leftSlider"><strong>Left Delay:</strong></label>
+		  </div>
+		  <div class="slidecontainer">
+			<input type="range" min="0" max="0.6" step="0.005" value="0" class="slider" id="leftSlider"/>
+		  </div>
+				<div class="slideReadout">
+					<output id="leftOutput" for="leftSlider">0.00 ms</output>
+				</div>
+			
+		  <div class="left">
+			<label for="rightSlider"><strong>Right Delay:</strong></label>
+		  </div>
+		  <div class="slidecontainer">
+			<input type="range" min="0" max="0.6" step="0.005" value="0" class="slider" id="rightSlider"/>
+		  </div>
+				<div class="slideReadout">
+					<output id="rightOutput" for="rightSlider">0.00 ms</output>
+				</div>
+		</div>
+	  </div>
+	
+		<div class="centredText">Listen with headphones!</div>
+  
+	</div>
+
+</body>
+</html>

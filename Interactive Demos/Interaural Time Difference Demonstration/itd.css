@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@900&display=swap');
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: large;
+  color: #44546a;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+a {
+  font-weight: bold;
+  /*text-decoration: none;*/
+  color: #44546a;
+}
+
+a:hover {
+  color: #dd7d3b;
+}
+
+.centringContainer {
+  width: 96%;
+	max-width: 800px;
+  height: 100%;
+	margin: auto;
+  position: relative;
+  top: 16px;
+}
+
+.centredText {
+	width: 100%;
+	text-align: center;
+}
+
+.main {
+  height: calc(100% - 320px);
+  overflow-y: auto;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.full {
+	width: 100%;
+	margin: auto;
+	/*text-align: center;*/
+	margin-bottom: 0px;
+}
+
+.table {
+  display: table;
+  width: 100%;
+}
+
+.row {
+  display: table-row;
+  height: 24px;
+}
+
+.left {
+	min-width: 96px;
+  height: 32px;
+	text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+  /*border: 1px solid black;*/
+  font-family: 'Spartan', sans-serif;
+}
+
+.slidecontainer {
+  width: 35%;
+  height: 32px;
+  display: table-cell;
+  /*border: 1px solid black;*/
+  vertical-align: middle;
+  padding-left: 6px;
+}
+
+.slideReadout {
+	min-width: 80px;
+  height: 32px;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 12px;
+	text-align: left;
+}
+
+.togglecontainer {
+  width: 50%;
+  height: 32px;
+  display: table-cell;
+  /*border: 1px solid black;*/
+  vertical-align: middle;
+  padding-left: 6px;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 32px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.button {
+	background: #FFFFFF;
+	cursor: pointer;
+	/*border: 4px solid #8496b0;
+	border-radius: 50%;*/
+	border: 0px;
+	color: #44546a;
+	width: 32px;
+	height: 32px;
+}
+.button:hover {
+	color: #8496b0;
+}
+
+.slider {
+	-webkit-appearance: none;  /* Override default CSS styles */
+	appearance: none;
+	width: 100%; /* Full-width */
+	height: 16px; /* Specified height */
+	outline: none; /* Remove outline */
+  background: #FFFFFF;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 16px; /* Set a specific slider handle width */
+	height: 16px; /* Slider handle height */
+	background: #FFFFFF;
+	cursor: pointer; /* Cursor on hover */
+	margin-top: -6px;
+	border: 2px solid #8496b0;
+	border-radius: 8px;
+}
+
+.slider::-moz-range-thumb {
+	width: 16px; /* Set a specific slider handle width */
+	height: 100%; /* Slider handle height */
+	background: #FFFFFF;
+	cursor: pointer; /* Cursor on hover */
+	border-width: 2px;
+	border-color: #8496b0;
+	border-radius: 50%;
+}
+
+.slider::-webkit-slider-thumb:hover {
+	background: #EFEFFF;
+}
+
+.slider::-moz-range-thumb:hover {
+	background: #EFEFFF;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #8496b0;
+	border-radius: 2px;
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 4px;
+	cursor: pointer;
+	background: #8496b0;
+	border-radius: 2px;
+}
+
+#responsive-canvas {
+  width: 100%; /*Necessary to ensure our canvas fits horizontally.*/
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+  margin-left: 2px;
+  /*margin-top: 2px;
+  margin-bottom: 2px;*/
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The toggle slider */
+.toggleSlide {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.toggleSlide:before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+input:checked + .toggleSlide {
+  background-color: #44546a;
+}
+
+input:checked + #orangeBack {
+  background-color: #dd7d3b;
+}
+
+/*input:focus + .toggleSlide {
+  box-shadow: 0 0 1px #8496b0;
+}*/
+
+input:checked + .toggleSlide:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
