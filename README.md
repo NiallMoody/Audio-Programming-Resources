@@ -17,6 +17,7 @@ A series of interactive demonstrations of digital audio and audio programming co
 - **[Interactive Aliasing Demonstration](https://codepen.io/NiallMoody/full/wvamwXM):** Demonstrates aliasing in the audio domain.
 - **[Interactive Bit Depth Demonstration](https://codepen.io/NiallMoody/full/bGENBOz):** Demonstrates the impact of bit depth on audio quality, and techniques for minimising correlated noise like dithering and noise shaping.
 - **[Digital Filter Demonstration](https://codepen.io/NiallMoody/full/abZmVwq):** Simple audio-visual demonstration of Low Pass, High Pass, and Band Pass filters.
+- **[Compressor Demonstration](https://codepen.io/NiallMoody/full/rNLMoXg):** Interactive demonstration of a compressor audio effect.
 - **[Digital Delay & Ring Buffer Demonstration](https://codepen.io/NiallMoody/full/JjJwwLX):** Visualisation of how digital delays/ring buffers work.
 - **[Frequency Perception Demonstration](https://codepen.io/NiallMoody/full/mdxjKmw):** Interactive demonstration of how our perception of frequency is logarithmic, not linear.
 - **[Interaural Time Difference Demonstration](https://codepen.io/NiallMoody/full/abKbEdR):** Simple interactive demonstration of the [Interaural Time Difference](https://en.wikipedia.org/wiki/Interaural_time_difference) using short digital delays.

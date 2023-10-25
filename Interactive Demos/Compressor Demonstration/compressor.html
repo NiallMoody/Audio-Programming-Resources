@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>Compressor Demonstration</title>
+
+	<link rel="stylesheet" href="compressor.css" />
+	<script src="compressor.js"></script>
+</head>
+
+<body>
+
+    <canvas id="responsive-canvas"></canvas>
+
+    <div class="centringContainer">
+
+        <div class="table">
+            <div class="row">
+                <div class="left">
+                    <label for="ThreshSlider"><strong>Threshold:</strong></label>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="-100" max="0" step="0.2" value="-24" class="slider" id="ThreshSlider" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="left">
+                    <label for="RatioSlider"><strong>Ratio:</strong></label>
+                </div>
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="20" step="0.1" value="12" class="slider" id="RatioSlider" />
+                </div>
+            </div>
+        </div>
+
+        <div class="main" id="main">
+
+            <div class="table">
+                <div class="row">
+                    <div class="left">
+                        <label for="FileButton"><strong>Load file:</strong></label>
+                    </div>
+                    <div class="togglecontainer">
+                        <input type="file" id="LoadFile" accept="audio/*">
+                        <button type="button" class="button" id="LoadFileButton">
+                            <span class="material-icons">queue_music</span>
+                        </button>
+                        <audio id="SoundFile"></audio>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="left">
+                        <label for="PlayButton" id="PlayLabel"><strong>Play:</strong></label>
+                    </div>
+                    <div class="togglecontainer">
+                        <button type="button" class="button" id="PlayButton">
+                            <span class="material-icons">play_circle_outline</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                This is an interactive demonstration of a compressor. Load a sound
+                file and then vary the <strong>Threshold</strong> and
+                <strong>Ratio</strong> controls to get a feel for how they work.
+                The effect can be particularly pronounced on drum loops.
+            </p>
+
+            <p>
+                (particularly, try setting the Threshold low and the Ratio high,
+                and see what it does to the sound)
+            </p>
+
+            <p>
+                Compressors work by reducing the amplitude of a signal when it is
+                above a set <strong>Threshold</strong>. Above that threshold, the
+                signal will be attenuated by a specific <strong>Ratio</strong>. In
+                this case our Ratio can be set from 1:1 (no attenuation) to 20:1
+                (strong attenuation).
+            </p>
+
+            <div class="table">
+                <div class="row">
+                    <div class="left">
+                        <label for="MakeUpSlider"><strong>Make-up Gain:</strong></label>
+                    </div>
+                    <div class="slidecontainer2">
+                        <input type="range" min="1" max="8" step="0.01" value="1" class="slider" id="MakeUpSlider" />
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Because they attenuate the signal, it's common for compressors to
+                also include a <strong>Make-up Gain</strong> control, to compensate
+                for the overall reduction in amplitude. Try imposing heavy
+                compression on the signal, then raise the overall gain with the
+                Make-up Gain slider.
+            </p>
+
+        </div>
+    </div>
+
+</body>
+</html>
