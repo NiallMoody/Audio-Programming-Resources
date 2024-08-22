@@ -13,6 +13,8 @@ In most cases you don't need the majority of those libraries and binaries. I was
 
 Again: **BACKUP YOUR PROJECT BEFORE DELETING ANYTHING!**
 
+|Path                                                   |Explanation|
+|-------------------------------------------------------|-----------|
 |Plugins/Wwise/\*.chm									|These are just help files; all of that stuff is online anyway|
 |Plugins/Wwise/Binaries/Mac								|Only delete if you have no plan to work on/build for macs|
 |Plugins/Wwise/Binaries/Win64/*.pdb						|.pdb files are debugging symbols; unless you're planning on debugging Wwise itself I don't think you need these|
