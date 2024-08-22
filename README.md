@@ -9,7 +9,9 @@ A collection of (mostly games-focused) audio programming resources I've develope
 
 - **[Unreal Audio Components (UE5 onwards)](/Unreal/exported/UE5%20Audio%20Schematic%20-%20New.pdf):** Diagram covering the primary audio components available in the Unreal engine (after the big UE5 audio updates; i.e. MetaSounds and Audio Modulation), and how they interact with each other (pdf)
 
-**Note:** The PDFs include links to the appropriate Unreal documentation pages for each component, but github's pdf viewer doesn't support links. For that you will need to download the files.
+**Note:** The PDFs above include links to the appropriate Unreal documentation pages for each component, but github's pdf viewer doesn't support links. For that you will need to download the files.
+
+- **[Wwise Unreal Integration Notes](/Unreal/Wwise%20Unreal%20Integration%20Notes.md):** By default, integrating Wwise into an Unreal project adds ~6GB of data into your project. This seems excessive to me, and I needed to keep the project size down for one of the labs I run, so this document lists the files/folders I was able to safely delete (reducing the project's Wwise folder to ~170MB).
 
 ## Interactive Demonstrations of Concepts
 A series of interactive demonstrations of digital audio and audio programming concepts, primarily hosted on codepen and archived [here](/Interactive%20Demos). The links below go to the codepen pages for each demonstration:
