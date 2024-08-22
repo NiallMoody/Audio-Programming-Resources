@@ -1,12 +1,13 @@
 # Wwise Unreal Integration Notes
 If you're planning on integrating Wwise into an Unreal project you'll find that the Wwise Unreal integration includes **a lot** of libraries and binaries for different platforms. I found that integrating a blank Wwise project into Unreal added ~6GB(!) of data to the Unreal project.
 
-In most cases you don't need the majority of those libraries and binaries. I was able to reduce the Plugins/Wwise folder to ~170MB by deleting the following folders/files.
+In most cases you don't need the majority of those libraries and binaries. I was able to reduce the `Plugins/Wwise` folder to ~170MB by deleting the following folders/files.
 
 ## Notes:
 1. This worked for my specific use-case. Depending on what you're doing you may well need some of these files. Specifically I needed something that would run in the editor without issue (including with the Wwise profiler), and produce a working **Shipping** build for Windows.
 2. I've verified this works for a blueprint-focused project in **Unreal 5.4.3**, using **Wwise 2023.1.4**.
 3. Obviously, backup your project before you delete anything.
+4. That said, I believe you should be able to replace any deleted files/folders by re-running the integration process from the Wwise launcher.
 
 ## List of Files/Folders to Delete:
 (all paths are relative to your Unreal project's base directory)
