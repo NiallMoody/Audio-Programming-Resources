@@ -7,9 +7,10 @@ A collection of (mostly games-focused) audio programming resources I've develope
 ## Unreal
 - **[Unreal Audio Base](https://github.com/NiallMoody/UnrealAudioBase):** A UE5 project created as a base for anyone wanting to explore audio implementation in Unreal. There's no audio included, but it's set up with a bunch of events/tasks requiring audio, that are common in game development.
 
+- **[Unreal Audio Components (UE5 onwards)](/Unreal/exported/UE5%20Audio%20Schematic%20-%20New.pdf):** Diagram covering the primary audio components available in the Unreal engine (after the big UE5 audio updates; i.e. MetaSounds and Audio Modulation), and how they interact with each other (pdf)
+
 - **[Unreal Audio Components (legacy)](/Unreal/exported/UE5%20Audio%20Schematic%20-%20Legacy.pdf):** Diagram covering the primary audio components available in the Unreal engine (before the big UE5 audio updates), and how they interact with each other (pdf)
 
-- **[Unreal Audio Components (UE5 onwards)](/Unreal/exported/UE5%20Audio%20Schematic%20-%20New.pdf):** Diagram covering the primary audio components available in the Unreal engine (after the big UE5 audio updates; i.e. MetaSounds and Audio Modulation), and how they interact with each other (pdf)
 
 **Note:** The PDFs above include links to the appropriate Unreal documentation pages for each component, but github's pdf viewer doesn't support links. For that you will need to download the files.
 
